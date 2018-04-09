@@ -10,7 +10,7 @@ public class Main {
         interceptors.add(new FirstInterceptor());
         interceptors.add(new SecondInterceptor());
         interceptors.add(new ThirdInterceptor());
-        interceptors.add(new FinallyInterceptor());
+        interceptors.add(new CallServerInterceptor());
         RealChain chain = new RealChain(interceptors, request, 0);
         try {
             chain.proceed(request);
